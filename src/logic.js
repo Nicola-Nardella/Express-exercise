@@ -1,6 +1,8 @@
 import _ from 'lodash'
 import jsonfile from 'jsonfile'
+
 import SegmentDefinition from './segmentDefinition'
+
 const db = 'src/db.json'
 
 const _getSpace = () => jsonfile.readFileSync(db).space
@@ -79,6 +81,7 @@ export default {
     const emptySpace = {space: []}
     jsonfile.writeFileSync(db, emptySpace)
   },
+
   getSpace: () => {
     let response = _getSpace()
     if (_.isEmpty(response)) {
@@ -86,6 +89,7 @@ export default {
     }
     return response
   },
+
   getLines: (n) => {
     const space = _getSpace()
     if (n < 2) {
@@ -97,6 +101,7 @@ export default {
     }
     return response
   },
+
   addPoint: (point) => {
     const {space} = jsonfile.readFileSync(db)
     const pointString = JSON.stringify(point)

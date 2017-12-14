@@ -11,12 +11,13 @@ const app = express()
 
 const space = logic.getSpace()
 
-
 app.use(bodyParser.json({ type: 'application/json' }))
+
 app.get('/space', (req, res) => {
   const space = logic.getSpace()
   return res.send(space)
 })
+
 app.get('/lines/:nCollinearPoints', (req, res) => {
   const {nCollinearPoints} = req.params
   const response = logic.getLines(nCollinearPoints)
