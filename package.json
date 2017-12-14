@@ -1,0 +1,20 @@
+{
+  "name": "welld",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "nodemon --exec babel-node src/index.js"
+  },
+  "author": "Nicola Nardella (nardellanicola10@gmail.com)",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "express": "^4.16.2",
+    "jsonfile": "^4.0.0",
+    "lodash": "^4.17.4",
+    "nodemon": "^1.12.6"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1"
+  }
+}
